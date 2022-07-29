@@ -1,7 +1,11 @@
 using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+
+
+
 
 namespace HairSalon.Controllers
 {
@@ -21,6 +25,7 @@ namespace HairSalon.Controllers
       return View(model);
     }
 
+
     [HttpGet]
     public ActionResult Create()
     {
@@ -39,8 +44,11 @@ namespace HairSalon.Controllers
     public ActionResult Details(int id)
     {
       Stylist stylistToDisplay = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      ViewBag.TheClients = _db.Clients.Count();
       return View(stylistToDisplay);
+      
     }
+
 
     
 
