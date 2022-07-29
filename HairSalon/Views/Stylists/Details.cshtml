@@ -4,10 +4,21 @@
 
 @model HairSalon.Models.Stylist
 
+
+
+
 <h2>@Html.DisplayFor(model => model.StylistFirstName)'s Details</h2>
 
 <p>Last Name: @Html.DisplayFor(model => model.StylistLastName)</p>
-<p>Specialty: @Html.DisplayFor(model => model.StylistSpecialty)</p>
-<p>@Model.StylistFirstName's Clients:
+@* <p>Specialty: @Html.DisplayFor(model => model.StylistSpecialty)</p> *@
+<p>Specialty: @Model.StylistSpecialty</p>
+<p>@Model.StylistFirstName's Clients: </p>
 
-
+@* @if (@Model.Clients.Count == 0)
+{
+  <p>No Stylists have been added to the system yet.</p>
+} 
+else
+{
+  <p>show clients here</p>
+} *@
