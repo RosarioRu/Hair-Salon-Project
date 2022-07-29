@@ -9,8 +9,16 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.StylistFirstName)
+  <label>First Name</label>
   @Html.TextBoxFor(model => model.StylistFirstName)
-  <input type="submit" value="Add Stylist to System"/>
+
+  <br><label>Last Name</label>
+  @Html.TextBoxFor(model => model.StylistLastName)
+
+  <br><label>Specialty</label>
+  @Html.TextBoxFor(model => model.StylistSpecialty)
+
+
+  <br><input type="submit" value="Add Stylist to System"/>
 }
 
