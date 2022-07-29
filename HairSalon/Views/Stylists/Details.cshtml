@@ -5,8 +5,6 @@
 @model HairSalon.Models.Stylist
 
 
-
-
 <h2>@Html.DisplayFor(model => model.StylistFirstName)'s Details</h2>
 
 <p>Last Name: @Html.DisplayFor(model => model.StylistLastName)</p>
@@ -14,11 +12,12 @@
 <p>Specialty: @Model.StylistSpecialty</p>
 <p>@Model.StylistFirstName's Clients: </p>
 
-@* @if (@Model.Clients.Count == 0)
+
+@if (@ViewBag.TheClients == 0)
 {
-  <p>No Stylists have been added to the system yet.</p>
-} 
+  <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients") </p>
+}
 else
 {
-  <p>show clients here</p>
-} *@
+  <p>List of clients goes here</p>
+}
