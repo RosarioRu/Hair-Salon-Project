@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@using HairSalon.Models
+@model HairSalon.Models.Client
+
+<h3>Add a new client for stylist</h3>
+
+@using (Html.BeginForm())
+{
+  <label>First Name</label>
+  @Html.TextBoxFor(model => model.ClientFirstName)
+
+  <br><label>Last Name</label>
+  @Html.TextBoxFor(model => model.ClientLastName)
+
+  <br><label>Phone Number</label>
+  @Html.TextBoxFor(model => model.ClientPhoneNumber)
+
+
+  <br><input type="submit" value="Add client"/>
+}
