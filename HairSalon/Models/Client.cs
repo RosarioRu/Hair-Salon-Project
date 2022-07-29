@@ -5,7 +5,12 @@ namespace HairSalon.Models
 {
   public class Client
   {
-    // public int ItemId { get; set; }
-    // public string Description { get; set; } 
+    public int ClientId { get; set; }
+    public string ClientFirstName { get; set; }
+    public string ClientLastName { get; set; }
+    public string  ClientPhoneNumber {get; set; }
+    public int SylistId {get; set; }
+    public virtual Stylist Stylist {get; set }
+
   }
 }
