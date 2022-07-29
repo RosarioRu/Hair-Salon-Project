@@ -16,7 +16,7 @@ else
     <ul>
       @foreach (Stylist stylist in Model)
       {
-        <li>@Html.ActionLink("{stylist.StylistFirstName}", "Details", "{stylist.StylistId}")</li>
+        <li>@Html.ActionLink($"{stylist.StylistFirstName}", "Details")</li>
       }
     </ul>
     <p>@Html.ActionLink("Add a Stylist", "Create")</p>
