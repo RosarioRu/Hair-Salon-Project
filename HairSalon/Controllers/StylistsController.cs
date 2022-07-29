@@ -35,6 +35,13 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index");
     }
 
+    [HttpGet]
+    public ActionResult Details()
+    {
+      
+      return View();
+    }
+
 
   }  
 }
