@@ -19,8 +19,15 @@ namespace HairSalon.Controllers
     public ActionResult Create(int id)
     {
       ViewBag.StylistId = _db.Stylists.FirstOrDefault(Stylist => Stylist.StylistId == id);
+      ViewBag.StylistName = ViewBag.StylistId.StylistFirstName;
       return View();
     }
+
+    // [HttpPost]
+    // public ActionResult Create()
+    // {
+     
+    // }
 
 
 
