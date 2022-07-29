@@ -15,7 +15,7 @@
 
 @if (@ViewBag.TheClients == 0)
 {
-  <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients") </p>
+  <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients", new { id = @Model.StylistId }) </p>
 }
 else
 {
