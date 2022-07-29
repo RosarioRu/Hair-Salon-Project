@@ -8,11 +8,17 @@ namespace HairSalon.Controllers
 {
   public class ClientsController : Controller
   {
-    
+
     private readonly HairSalonContext _db;
-    public StylistsController(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
+    }
+
+    [HttpGet]
+    public ActionResult Create()
+    {
+      return View();
     }
 
 
