@@ -36,12 +36,13 @@ namespace HairSalon.Controllers
     }
 
     [HttpGet]
-    public ActionResult Details()
+    public ActionResult Details(int id)
     {
-      
-      return View();
+      Stylist stylistToDisplay = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      return View(stylistToDisplay);
     }
 
+    
 
   }  
 }
