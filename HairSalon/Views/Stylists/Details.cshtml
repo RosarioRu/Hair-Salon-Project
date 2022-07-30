@@ -3,6 +3,8 @@
 }
 
 @model HairSalon.Models.Stylist
+@using HairSalon.Models
+
 
 
 <h2>@Html.DisplayFor(model => model.StylistFirstName)'s Details</h2>
@@ -13,11 +15,18 @@
 <p>@Model.StylistFirstName's Clients: </p>
 
 
-@if (@ViewBag.ThisOnesClients == null)
+@if (@ViewBag.HasClientsOrNot == null)
 {
   <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients", new { id = @Model.StylistId }) </p>
 }
 else
 {
-  <p>List of clients goes here</p>
+  <ul>
+    @foreach (Client Client in @ViewBag.StylistClientsInListForm)
+    {
+      <li>@( $"{Client.ClientFirstName}" + " " + $"{Client.ClientLastName}")</li>
+    }
+  </ul>
 }
+
+  
