@@ -17,6 +17,14 @@ namespace HairSalon.Controllers
     }
 
     [HttpGet]
+    public ActionResult Index()
+    {
+      List<Client> model = _db.Clients.ToList();
+      return View(model);
+    }
+  
+
+    [HttpGet]
     public ActionResult Create(int id)
     {
       ViewBag.Stylist= _db.Stylists.FirstOrDefault(Stylist => Stylist.StylistId == id);
