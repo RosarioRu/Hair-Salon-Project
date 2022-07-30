@@ -6,10 +6,9 @@
 
 @if (@Model.Count == 0)
 {
-  <h5>No Clients have been added to the system yet</h5>
+  <h4>No Clients have been added to the system yet</h4>
 
   <p>@Html.ActionLink("Add a Client", "CreateClient")</p>
-  <p>@Html.ActionLink("Return Home", "Index", "Home")</p>
 } 
 else
 {
@@ -22,7 +21,7 @@ else
     }
   </ul>
   <p>@Html.ActionLink("Add a Client", "CreateClient")</p>
-  <p>@Html.ActionLink("Return Home", "Index", "Home")</p>
+  
 }
 
 
