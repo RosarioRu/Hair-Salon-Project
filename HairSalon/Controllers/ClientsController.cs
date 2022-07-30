@@ -38,6 +38,14 @@ namespace HairSalon.Controllers
         return View();
       }
     }
+
+    [HttpPost]
+    public ActionResult CreateClient(Client clientToAdd)
+    {
+      _db.Clients.Add(clientToAdd);
+      _db.SaveChanges();
+      return RedirectToAction("Index", "Clients");
+    }
   
 
     [HttpGet]
