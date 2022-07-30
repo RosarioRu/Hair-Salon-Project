@@ -29,6 +29,10 @@ namespace HairSalon.Controllers
     [HttpGet]
     public ActionResult Create()
     {
+      if (_db.Stylists.Count() == 0)
+      {
+        ViewBag.Message = "Please note: In order to add clients, you must add a stylist first!";
+      }
       return View();
     }
 
