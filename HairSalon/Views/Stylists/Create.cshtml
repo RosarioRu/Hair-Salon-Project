@@ -5,21 +5,22 @@
 @using HairSalon.Models
 @model HairSalon.Models.Stylist
 
-<p>@ViewBag.Message</p>
-<h3>Add a new Stylist</h3>
+<div class="create-stylist">
+  <p>@ViewBag.Message</p>
+  <h3>Add a new Stylist</h3>
 
-@using (Html.BeginForm())
-{
-  <label>First Name</label>
-  @Html.TextBoxFor(model => model.StylistFirstName)
+  @using (Html.BeginForm())
+  {
+    <br><label>First Name</label>
+    @Html.TextBoxFor(model => model.StylistFirstName)
 
-  <br><label>Last Name</label>
-  @Html.TextBoxFor(model => model.StylistLastName)
+    <br><label>Last Name</label>
+    @Html.TextBoxFor(model => model.StylistLastName)
 
-  <br><label>Specialty</label>
-  @Html.TextBoxFor(model => model.StylistSpecialty)
+    <br><label>Specialty</label>
+    @Html.TextBoxFor(model => model.StylistSpecialty)<br>
 
-
-  <br><input type="submit" value="Add Stylist to System"/>
-}
+    <br><input type="submit" value="Add Stylist to System"/> 
+  }
+</div>
 

@@ -1,14 +1,17 @@
 body {
   background-color: #cda7a7;
   box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .center-stylists, .center-clients {
   width: 30%;
   margin: auto;
   margin-top: 10%;
-  text-align: left;
-  
+  padding: 2%;
+  text-align: left; 
+  border: 1px solid black;
+  background-color: #b95c5c;
 }
 
 .center-stylists ul, .center-clients ul{
@@ -29,8 +32,28 @@ body {
   text-align: center;
 }
 
+.create-stylist, .create-client, .create-client2 {
+  width: 30%;
+  margin: auto;
+  margin-top: 5%;
+  text-align: center;
+  padding: 1%;
+  border: 3px dotted black;
+
+}
+
+.stylist-details {
+  width: 33%;
+  margin: auto;
+  margin-top: 5%;
+  padding: 3%;
+  padding-left: 5%;
+  border: 2px solid rgb(113, 17, 17);
+  background-color: #b95c5c;
+}
+
 body a {
-  color: black;
+  color: rgb(52, 25, 171);
 }
 
 .navbar {

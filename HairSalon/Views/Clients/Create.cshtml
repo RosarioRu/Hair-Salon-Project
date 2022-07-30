@@ -2,22 +2,24 @@
   Layout = "_Layout";
 }
 
-@using HairSalon.Models
-@model HairSalon.Models.Client
+<div class="create-client">
+  @using HairSalon.Models
+  @model HairSalon.Models.Client
 
-<h3>Add a new client for @ViewBag.StylistName</h3>
+  <h3>Add a new client for @ViewBag.StylistName</h3>
 
-@using (Html.BeginForm())
-{
-  <label>First Name</label>
-  @Html.TextBoxFor(model => model.ClientFirstName)
+  @using (Html.BeginForm())
+  {
+    <label>First Name</label>
+    @Html.TextBoxFor(model => model.ClientFirstName)
 
-  <br><label>Last Name</label>
-  @Html.TextBoxFor(model => model.ClientLastName)
+    <br><label>Last Name</label>
+    @Html.TextBoxFor(model => model.ClientLastName)
 
-  <br><label>Phone Number</label>
-  @Html.TextBoxFor(model => model.ClientPhoneNumber)
-  <input type="hidden" id="StylistId" name="StylistId" value="@ViewBag.StylistID">
+    <br><label>Phone Number</label>
+    @Html.TextBoxFor(model => model.ClientPhoneNumber)<br>
+    <input type="hidden" id="StylistId" name="StylistId" value="@ViewBag.StylistID">
 
-  <br><input type="submit" value="Add client"/>
-}
+    <br><input type="submit" value="Add client"/>
+  }
+</div>
