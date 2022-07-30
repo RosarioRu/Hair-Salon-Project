@@ -1,1 +1,29 @@
-<h1>form for creating a client from homepage or index of clients</h1>
+@{
+  Layout = "_Layout";
+}
+
+
+
+@using HairSalon.Models
+@model HairSalon.Models.Client
+
+<p>@ViewBag.Message</p>
+<h3>Add A New Salon Client</h3>
+
+@using (Html.BeginForm())
+{
+  <label>First Name</label>
+  @Html.TextBoxFor(model => model.ClientFirstName)
+
+  <br><label>Last Name</label>
+  @Html.TextBoxFor(model => model.ClientLastName)
+
+  <br><label>Phone Number</label>
+  @Html.TextBoxFor(model => model.ClientPhoneNumber)
+  
+  @Html.LabelFor(model => model.Stylist)
+  @Html.DropDownList("StylistId")
+
+
+  <br><input type="submit" value="Add client"/>
+}
