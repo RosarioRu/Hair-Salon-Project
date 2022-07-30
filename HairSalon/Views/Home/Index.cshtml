@@ -5,15 +5,17 @@
   <meta charset="utf-8">
   <title>Hair Salon Home</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="~/css/homestyles.css">
 </head>
 
 <body>
-  <h1>Eau Claire's Salon</h1>
-  <h3>Welcome Claire</h3>
+  <div class="center">
+    <h1>Eau Claire's Salon</h1>
+    <br><h3>Welcome Claire</h3>
 
-  <p>@Html.ActionLink("Manage your Stylists", "Index", "Stylists")</p>
-  <p>@Html.ActionLink("View All Clients", "Index", "Clients")</p>
-
+    <br><p>@Html.ActionLink("Manage your Stylists", "Index", "Stylists")</p>
+    <p>@Html.ActionLink("View All Clients", "Index", "Clients")</p>
+  </div>
 </body>
 
 </html>

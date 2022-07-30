@@ -6,21 +6,25 @@
 
 @if (@Model.Count == 0)
 {
-  <h4>No Clients have been added to the system yet</h4>
+  <div class="center-no-clients">
+    <h4>No Clients have been added to the system yet</h4>
 
-  <p>@Html.ActionLink("Add a Client", "CreateClient")</p>
+    <p>@Html.ActionLink("Add a Client", "CreateClient")</p>
+  </div>
 } 
 else
 {
-  <h3>Eau Claire's Clients</h3>
-  
-  <ul>
-    @foreach (Client client in Model)
-    {
-      <li>@Html.ActionLink($"{client.ClientFirstName}", "Details", new {id = client.ClientId} ) </li>
-    }
-  </ul>
-  <p>@Html.ActionLink("Add a Client", "CreateClient")</p>
+  <div class="center-clients">
+    <h3>Eau Claire's Clients</h3>
+    
+    <ul>
+      @foreach (Client client in Model)
+      {
+        <li>@Html.ActionLink($"{client.ClientFirstName}", "Details", new {id = client.ClientId} ) </li>
+      }
+    </ul>
+    <p class="torightc">@Html.ActionLink("Add a Client", "CreateClient")</p>
+  </div>
   
 }
 

@@ -1,5 +1,36 @@
 body {
-  background-color: rgb(235, 229, 221);
+  background-color: #cda7a7;
+  box-sizing: border-box;
+}
+
+.center-stylists, .center-clients {
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+  text-align: left;
+  
+}
+
+.center-stylists ul, .center-clients ul{
+  /* list-style-type: none; */
+  list-style-position: inside;
+  text-align: left;
+
+}
+
+.toright, .torightc  {
+  margin-left: 4%;
+}
+
+.center-no-clients, .center-no-stylists {
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+}
+
+body a {
+  color: black;
 }
 
 .navbar {
@@ -7,8 +38,17 @@ body {
   border: 2px solid black;
   position:fixed;
   bottom:0%;
-  left:0px;
   width:100%;
-  background-color: rgb(206, 207, 195);
-  padding:8px;
+  background-color: #c04747;
+  padding-left: 3%;
+  padding-right: 3%;
 }
+
+.navbar a {
+  color: black;
+}
+
+/* .home, .stylists {
+  display: inline;
+  
+} */
