@@ -12,15 +12,17 @@
 <p>Last Name: @Html.DisplayFor(model => model.StylistLastName)</p>
 @* <p>Specialty: @Html.DisplayFor(model => model.StylistSpecialty)</p> *@
 <p>Specialty: @Model.StylistSpecialty</p>
-<p>@Model.StylistFirstName's Clients: </p>
+
 
 
 @if (@ViewBag.HasClientsOrNot == null)
 {
   <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients", new { id = @Model.StylistId }) </p>
+  <p>@Html.ActionLink("Return to All Stylists", "Index")</p>
 }
 else
 {
+  <p>@Model.StylistFirstName's Clients: </p>
   <ul>
     @foreach (Client Client in @ViewBag.StylistClientsInListForm)
     {
