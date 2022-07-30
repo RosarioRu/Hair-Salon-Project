@@ -27,6 +27,8 @@ else
       <li>@( $"{Client.ClientFirstName}" + " " + $"{Client.ClientLastName}")</li>
     }
   </ul>
+  <br><p>@Html.ActionLink("Add another client for " + @Model.StylistFirstName, "Create", "Clients", new { id = @Model.StylistId })</p>
+  <p>@Html.ActionLink("Return to All Stylists", "Index")</p>
 }
 
   
