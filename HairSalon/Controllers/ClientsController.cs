@@ -1,5 +1,6 @@
 using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq; //this allows us to use ToList() method below
@@ -26,7 +27,16 @@ namespace HairSalon.Controllers
     [HttpGet]
     public ActionResult CreateClient()
     {
-      return View();
+      
+      if (_db.Stylists.Count() == 0)
+      {
+        return RedirectToAction("Create", "Stylists");
+      }
+      else
+      {
+        ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "StylistFirstName");
+        return View();
+      }
     }
   
 
