@@ -13,7 +13,7 @@
 <p>@Model.StylistFirstName's Clients: </p>
 
 
-@if (@ViewBag.TheClients == 0)
+@if (@ViewBag.ThisOnesClients == null)
 {
   <p>This Stylist has no clients yet - click @Html.ActionLink("here to add one", "Create", "Clients", new { id = @Model.StylistId }) </p>
 }

@@ -1,5 +1,6 @@
 using HairSalon.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq; //this allows us to use ToList() method below
 
@@ -18,16 +19,20 @@ namespace HairSalon.Controllers
     [HttpGet]
     public ActionResult Create(int id)
     {
-      ViewBag.StylistId = _db.Stylists.FirstOrDefault(Stylist => Stylist.StylistId == id);
-      ViewBag.StylistName = ViewBag.StylistId.StylistFirstName;
+      ViewBag.Stylist= _db.Stylists.FirstOrDefault(Stylist => Stylist.StylistId == id);
+      ViewBag.StylistName = ViewBag.Stylist.StylistFirstName;
+      ViewBag.StylistID = ViewBag.Stylist.StylistId;
+      
       return View();
     }
 
-    // [HttpPost]
-    // public ActionResult Create()
-    // {
-     
-    // }
+    [HttpPost]
+    public ActionResult Create(Client clientToAdd)
+    {
+      _db.Clients.Add(clientToAdd);
+      _db.SaveChanges();
+      return RedirectToAction("Index", "Stylists");
+    }
 
 
 
