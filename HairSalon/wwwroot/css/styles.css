@@ -25,7 +25,7 @@ body {
   margin-left: 4%;
 }
 
-.center-no-clients, .center-no-stylists {
+.center-no-clients, .center-no-stylists, .delete-client-page {
   width: 60%;
   margin: auto;
   margin-top: 10%;
@@ -42,7 +42,7 @@ body {
 
 }
 
-.stylist-details {
+.stylist-details, .client-details {
   width: 33%;
   margin: auto;
   margin-top: 5%;

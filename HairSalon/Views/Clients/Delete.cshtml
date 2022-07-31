@@ -3,11 +3,12 @@
 }
 
 @model HairSalon.Models.Client
+<div class="delete-client-page">
+  <h4>Are you sure you want to delete <strong>@Model.ClientFirstName @Model.ClientLastName</strong>?</h4><br>
 
-<h4>Are you sure you want to delete @Model.ClientFirstName?</h4><br>
-
-@using (Html.BeginForm())
-{
-    <input type="submit" value="Delete" />
-}
-<br>@Html.ActionLink("Return to client list", "Index")
+  @using (Html.BeginForm())
+  {
+      <input type="submit" value="Delete" />
+  }
+  <br>@Html.ActionLink("Return to client list", "Index")
+</div>
