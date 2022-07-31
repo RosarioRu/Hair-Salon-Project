@@ -31,7 +31,7 @@ _This project consists of an C# MVC web application that allows a salon manager 
   * _[https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql]_
 
 * _Open MySQL Workbench and import the database provided with this project (rosario_ruvalcaba)._
-  * _!(hair-salon-project/assets/HairSalonSchema.jpg)
+  * _!(hair-salon-project/HairSalonSchema.jpg)
 
 
 
