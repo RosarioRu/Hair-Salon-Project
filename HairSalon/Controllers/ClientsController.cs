@@ -66,6 +66,19 @@ namespace HairSalon.Controllers
       return RedirectToAction("Index", "Stylists");
     }
 
+    [HttpGet]
+    public ActionResult Details (int id)
+    {
+      Client clientToDisplay = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+      return View(clientToDisplay);
+    }
+
+    [HttpGet]
+    public ActionResult Delete (int id)
+    {
+      Client clientToDisplay = _db.Clients.FirstOrDefault(Client => Client.ClientId == id);
+      return View(clientToDisplay);
+    }
 
 
   }
