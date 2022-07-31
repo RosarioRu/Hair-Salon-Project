@@ -27,23 +27,22 @@ _This project consists of an C# MVC web application that allows a salon manager 
 
 * _Ensure you have C# and .NET installed by running the command [dotnet --version] in your terminal. If the response is not a version number, install .NET from Microsoft website._
 
-* _Install MySQL Community Server and select or set the following configuration options (use default if not specified):_
-  * _Use Legacy Password Encryption_
-  * _Set a password (you will need this later so be sure to remember it!)_
-  * _Click Finish_
+* _Install MySQL Community Server MySQL Workbench per instruction provided below by Epicodus:_
+  * _[(https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql)]_
 
-* _Configure your shell's Environment Variables._
-  * _For Bash [$ echo 'export PATH='/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile]_
-  * _For Zsh [$ echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc]_
+* _Open MySQL Workbench and import the database provided with this project (rosario_ruvalcaba)_
 
+* _Create file called appsettings.json in the main project directory (HairSalon)_
+  * _Open file and add the following: { "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=[DATABASE NAME HERE];uid=[USER ID HERE];pwd=[PASSWORD HERE];" } }_
+  * _Substitute your own information for DATABASE NAME HERE, USER ID HERE, and PASSWORD HERE._
 
-* _Navigate to the BakeryTracker directory in the project and run the command [dotnet restore, then dotnet build]._
+* _Navigate to the HairSalon directory in the project and run the command [dotnet restore, then dotnet build]._
 
-* _While still in the Bakery subdirectory, run the command [dotnet run] to run the application using a localhost server._
+* _While still in the HairSalon directory, run the command [dotnet run] to run the application using a localhost server._
 
 ## Known Bugs
 
-* _The ordered lists of orders on the Vendor Details page is not formatting correctly -- the numbers which number the list items are left-aligned while the actual list items are centered._
+* _At the moment: user can enter 'blank' Stylists/Clients as well as the wrong data type, such as letters for a phone number._
 
 ## License
 
