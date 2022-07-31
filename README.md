@@ -28,11 +28,13 @@ _This project consists of an C# MVC web application that allows a salon manager 
 * _Ensure you have C# and .NET installed by running the command [dotnet --version] in your terminal. If the response is not a version number, install .NET from Microsoft website._
 
 * _Install MySQL Community Server and select or set the following configuration options (use default if not specified):_
-  * _1.Use Legacy Password Encryption_
-  * _2.Set a password (you will need this later so be sure to remember it!)_
-  * _3.Click Finish_
+  * _Use Legacy Password Encryption_
+  * _Set a password (you will need this later so be sure to remember it!)_
+  * _Click Finish_
 
-* _Configure your shell's Environment Variables. For Bash: [$ echo 'export PATH='/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile], for Zsh [$ echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc]_
+* _Configure your shell's Environment Variables._
+  * _For Bash [$ echo 'export PATH='/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile]_
+  * _For Zsh [$ echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc]_
 
 
 * _Navigate to the BakeryTracker directory in the project and run the command [dotnet restore, then dotnet build]._
