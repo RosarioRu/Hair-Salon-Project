@@ -31,6 +31,9 @@ _This project consists of an C# MVC web application that allows a salon manager 
   * _[https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c/installing-and-configuring-mysql]_
 
 * _Open MySQL Workbench and import the database provided with this project (rosario_ruvalcaba)._
+  * _!(hair-salon-project/assets/HairSalonSchema.jpg)
+
+
 
 * _Create file called appsettings.json in the main project directory (HairSalon)_
   * _Open file and add the following: { "ConnectionStrings": { "DefaultConnection": "Server=localhost;Port=3306;database=[DATABASE NAME HERE];uid=[USER ID HERE];pwd=[PASSWORD HERE];" } }_
